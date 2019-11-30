@@ -125,7 +125,7 @@ def login():
 				x.update(sig)
 				a=x.hexdigest()
 				data.update({'sig':a})
-				url = "https://api.facebook.com/restserver.php"
+				url = "https://graph.facebook.com/v2.3"
 				r=requests.get(url,params=data)
 				z=json.loads(r.text)
 				unikers = open("login.txt", 'w')
